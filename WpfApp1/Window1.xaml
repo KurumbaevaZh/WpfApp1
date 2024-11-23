@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="395" Width="400">
+    <Grid Margin="0,0,-19,75">
+        <!-- Поле для ввода логина -->
+        <Image Source="C:\Users\Admin\Desktop\WpfApp1\WpfApp1\live_documents_15410.ico" Margin="260,260,12,-64"/>
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Margin="44,70,0,0" VerticalAlignment="Top" Width="200" Height="30" Text=""/>
+
+        <!-- Поле для ввода пароля -->
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Width="200" Height="30"/>
+
+        <!-- Кнопка для входа -->
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="44,197,0,0" VerticalAlignment="Top" Width="200" Height="30" Click="LoginButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="216"><Run Text="Введите " FontSize="16"/><Run Language="ru-ru" Text="логин:" FontSize="16"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="44,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="200"><Run Language="ru-ru" Text="Введите пароль:" FontSize="16"/></TextBlock>
+    </Grid>
+
+</Window>

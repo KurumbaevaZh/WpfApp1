@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.ReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reports" Height="400" Width="700">
+    <Grid>
+        <ComboBox x:Name="SortComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,10,0,0" SelectionChanged="SortComboBox_SelectionChanged">
+            <ComboBoxItem Content="По клиентам" Tag="client"/>
+            <ComboBoxItem Content="По заказам" Tag="order"/>
+            <ComboBoxItem Content="По дате" Tag="date"/>
+        </ComboBox>
+
+        <!-- DataGrid для отображения данных -->
+        <DataGrid x:Name="OrdersDataGrid" HorizontalAlignment="Left" Height="300" Width="760" Margin="10,50,10,10">
+            <DataGrid.Columns>
+                <!-- Названия столбцов на русском -->
+                <DataGridTextColumn Header="ID заказа" Binding="{Binding OrderId}" />
+                <DataGridTextColumn Header="Имя клиента" Binding="{Binding ClientName}" />
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding OrderDate}" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" />
+            </DataGrid.Columns>
+        </DataGrid>    </Grid>
+</Window>
